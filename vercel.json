@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "petogram_petogram.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/petogram_petogram.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/petogram_petogram.html"
+    }
+  ]
+}
