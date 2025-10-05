@@ -2,18 +2,34 @@
   "version": 2,
   "builds": [
     {
-      "src": "petogram_petogram.html",
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "favicon.ico",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "favicon.svg",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
+      "src": "/favicon.ico",
+      "dest": "/favicon.ico"
+    },
+    {
+      "src": "/favicon.svg",
+      "dest": "/favicon.svg"
+    },
+    {
       "src": "/",
-      "dest": "/petogram_petogram.html"
+      "dest": "/index.html"
     },
     {
       "src": "/(.*)",
-      "dest": "/petogram_petogram.html"
+      "dest": "/index.html"
     }
   ]
 }
